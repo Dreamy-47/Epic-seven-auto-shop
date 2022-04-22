@@ -8,6 +8,17 @@
 ### **注意 作者的螢幕是(1920*1080) 若不同者可能無法使用**
 
 ### 使用說明
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QDD3y8ososc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+##### 下載檔案
+cmd執行
+```
+git clone https://github.com/Dreamy-47/Epic-seven-auto-shop.git
+```
+或是右上角 code -> zip也行
+
+#### 載入按鍵設定
+
 請將 [com.stove.epic7.google.cfg](https://github.com/Dreamy-47/Epic-seven-auto-shop/blob/main/com.stove.epic7.google.cfg) 放進bluestack鍵盤管理中
 
 ![](https://i.imgur.com/7MjiuH5.png)
@@ -30,6 +41,7 @@ config.json用來設定以下
 * 是否於刷到10抽聖約時停止, 預設為false
 ## 執行
 請於該資料夾打開cmd並執行
+
 ```
 python auto_shop.py
 ```
