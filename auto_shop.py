@@ -37,7 +37,7 @@ def main(jdata):
     if(ls!= None):
       buy_up(ls.y)
       nortotal+=1
-      print(1)
+      #print(1)
       sleep(1)
     ls = pyautogui.locateCenterOnScreen(os.path.join(image_path,'secrect2.png'),confidence=0.8)
     if(ls!= None):
@@ -51,7 +51,7 @@ def main(jdata):
       sleep(1)
       buy_down(ls.y)
       nortotal+=1
-      print(2)
+      #print(2)
     ls = pyautogui.locateCenterOnScreen(os.path.join(image_path,'secrect2.png'),confidence=0.8)
     if(ls!= None):
       sleep(1)
