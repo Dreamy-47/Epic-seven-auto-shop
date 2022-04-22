@@ -33,7 +33,7 @@ git clone https://github.com/Dreamy-47/Epic-seven-auto-shop.git
 安裝好python
 cmd執行以下來安裝package
 ```
-pip install -r requirement
+pip install -r requirement.txt
 ```
 config.json用來設定以下
 * 刷商店次數
