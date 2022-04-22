@@ -8,7 +8,7 @@
 ### **注意 作者的螢幕是(1920*1080) 若不同者可能無法使用**
 
 ### 使用說明
-請將 [com.stove.epic7.google.cfg](https://) 放進bluestack鍵盤管理中
+請將 [com.stove.epic7.google.cfg](https://github.com/Dreamy-47/Epic-seven-auto-shop/blob/main/com.stove.epic7.google.cfg) 放進bluestack鍵盤管理中
 
 ![](https://i.imgur.com/7MjiuH5.png)
 
