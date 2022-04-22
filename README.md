@@ -8,8 +8,8 @@
 ### **注意 作者的螢幕是(1920*1080) 若不同者可能無法使用**
 
 ### 使用說明
-<iframe width="560" height="315" src="https://www.youtube.com/embed/QDD3y8ososc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+YT:
+[![](https://img.youtube.com/vi/QDD3y8ososc/0.jpg)](https://youtu.be/QDD3y8ososc)
 ##### 下載檔案
 cmd執行
 ```
