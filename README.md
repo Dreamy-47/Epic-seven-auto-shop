@@ -7,9 +7,6 @@
 簡單來說就是將螢幕截圖->檢查有沒有與書籤相同的圖片->程式控制鍵盤按下模擬器設定好的按鈕來達成購買書籤->重複執行
 ### **注意 作者的螢幕是(1920*1080) 若不同者可能無法使用**
 
-### 使用說明
-YT:
-[![](https://img.youtube.com/vi/QDD3y8ososc/0.jpg)](https://youtu.be/QDD3y8ososc)
 ##### 下載檔案
 cmd執行
 ```
@@ -17,17 +14,7 @@ git clone https://github.com/Dreamy-47/Epic-seven-auto-shop.git
 ```
 或是右上角 code -> zip也行
 
-#### 載入按鍵設定
 
-請將 [com.stove.epic7.google.cfg](https://github.com/Dreamy-47/Epic-seven-auto-shop/blob/main/com.stove.epic7.google.cfg) 放進bluestack鍵盤管理中
-
-![](https://i.imgur.com/7MjiuH5.png)
-
-![](https://i.imgur.com/jnPnxtb.jpg)
-大概就長這樣，按鍵都能調，不過調整後要自己去code裡修改
-1~4對應上4個品項 5跟6對應下二
-8跟左ctrl對應刷新
-9對應購買
 
 ### 安裝方法
 安裝好python
@@ -37,7 +24,7 @@ pip install -r requirement.txt
 ```
 config.json用來設定以下
 * 刷商店次數
-* 顯示本次執行結果, 預設為false
+* 顯示本次執行結果, 預設為true
 * 是否於刷到10抽聖約時停止, 預設為false
 ## 執行
 請於該資料夾打開cmd並執行
