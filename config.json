@@ -1,6 +1,6 @@
 {
-    "times":333,
+    "times":100,
     "showoutput":true,
-    "stop_when_get_ten":false
-    
+    "stop_when_get_ten":false,
+    "every_move_time":0.8
 }

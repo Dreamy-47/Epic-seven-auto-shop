@@ -9,14 +9,36 @@ from time import sleep
 image_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "image")
 Anchor_point_top,Anchor_point_down = 0,0
 Confirm_buy_point =0
-def buy_up(ls):
-  pag.click(x=Anchor_point_top.x,y=ls+20)
-  pag.click(Confirm_buy_point.x,Confirm_buy_point.y)
-  
-def buy_down(ls , total):
-  if ls > 600:
+def buy_up(ls,str):
+  while True:
     pag.click(x=Anchor_point_top.x,y=ls+20)
-    pag.click(Confirm_buy_point.x,Confirm_buy_point.y)
+    y= pag.locateCenterOnScreen(os.path.join(image_path,f'confrim_{str}.png'))
+    if(y == None):
+      continue
+    else:
+      while True:
+        pag.click(Confirm_buy_point.x,Confirm_buy_point.y)
+        if pag.locateCenterOnScreen(os.path.join(image_path,f'confrim_{str}.png')) != None:
+          continue
+        break
+      break
+
+  
+def buy_down(ls , total,str):
+  if ls > 600:
+    
+    while True:
+      pag.click(x=Anchor_point_top.x,y=ls+20)
+      y= pag.locateCenterOnScreen(os.path.join(image_path,f'confrim_{str}.png'))
+      if(y == None):
+        continue
+      else:
+        while True:
+          pag.click(Confirm_buy_point.x,Confirm_buy_point.y)
+          if pag.locateCenterOnScreen(os.path.join(image_path,f'confrim_{str}.png')) != None:
+            continue
+          break
+        break
     return total+1
   else:
     return total
@@ -32,7 +54,7 @@ def main(cfg):
   sleep(2)
   
   nortotal,secrettotal = 0,0
-  pag.PAUSE=0.5
+  pag.PAUSE=cfg['every_move_time']
   
   Anchor_point_top,Anchor_point_down  = get_screen_Anchor_point()
   Scroll_point = pag.Point(Anchor_point_down.x+(Anchor_point_top.x-Anchor_point_down.x)//4,Anchor_point_down.y)
@@ -50,15 +72,19 @@ def main(cfg):
   
   
   for i in range(cfg['times']):
+    if (i+1)%100 ==0:
+      sleep(5)
     ls = pag.locateCenterOnScreen(os.path.join(image_path,'normal2.png'),confidence=0.8)
     if(ls!= None):
-      buy_up(ls.y)
+      sleep(1)
+      buy_up(ls.y,"normal")
       nortotal+=1
       sleep(1)
     
     ls = pag.locateCenterOnScreen(os.path.join(image_path,'secrect2.png'),confidence=0.8)
     if(ls!= None):
-      buy_up(ls.y)
+      sleep(1)
+      buy_up(ls.y,"secrect")
       secrettotal+=1
       sleep(1)
     
@@ -69,12 +95,12 @@ def main(cfg):
     if(ls!= None):
       sleep(1)
       
-      nortotal = buy_down(ls.y, nortotal)
+      nortotal = buy_down(ls.y, nortotal,"normal")
       
     ls = pag.locateCenterOnScreen(os.path.join(image_path,'secrect2.png'),confidence=0.8)
     if(ls!= None):
       sleep(1)
-      secrettotal = buy_down(ls.y, secrettotal)
+      secrettotal = buy_down(ls.y, secrettotal,"secrect")
 
     if (nortotal>=10) and (cfg['stop_when_get_ten'] == True):
       break
