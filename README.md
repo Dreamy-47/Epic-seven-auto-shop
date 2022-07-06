@@ -4,38 +4,32 @@
 因此,若使用者被封概不負責
 #### 原理
 以防萬一，還是說明一下此code的原理
-簡單來說就是將螢幕截圖->檢查有沒有與書籤相同的圖片->程式控制滑鼠按下按鈕來達成購買書籤->重複執行
+簡單來說就是將螢幕截圖->檢查有沒有與書籤相同的圖片->程式控制鍵盤按下模擬器設定好的按鈕來達成購買書籤->重複執行
 ### **注意 作者的螢幕是(1920*1080) 若不同者可能無法使用**
+
 ### 使用說明
-[![](https://img.youtube.com/vi/9aHBmRiEL10/0.jpg)](https://youtu.be/9aHBmRiEL10)
-
+[![](https://img.youtube.com/vi/9_hyR_wQULM/0.jpg)](https://youtu.be/9_hyR_wQULM)
 ##### 下載檔案
-cmd執行
-```
-git clone https://github.com/Dreamy-47/Epic-seven-auto-shop.git
-```
-或是右上角 code -> zip也行
+[Download_link](https://github.com/Dreamy-47/Epic-seven-auto-shop/releases/tag/v1.0.0)
+
+![](https://i.imgur.com/cwok9Ty.png)
+點選exe檔執行就好
+
+若擔心檔案有問題也可自行下載source compile
 
 
-
-### 安裝方法
+### source安裝方法
 安裝好python
 cmd執行以下來安裝package
 ```
 pip install -r requirement.txt
 ```
-config.json用來設定以下
-* 刷商店次數
-* 顯示本次執行結果, 預設為true
-* 是否於刷到10抽聖約時停止, 預設為false
+
 ## 執行
 請於該資料夾打開cmd並執行
 
 ```
 python auto_shop.py
 ```
-兩秒內切換為e7完全視窗(如下),就能放給它跑了,要中斷就直接關掉cmd就好
 
-![](https://i.imgur.com/wYteMSY.jpg)
-
-由於是程式操控滑鼠鍵盤,視窗不能切換,建議睡前執行
+由於是程式操控滑鼠,視窗不能切換,建議睡前執行
